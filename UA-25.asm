@@ -1,7 +1,3 @@
-;
-;  D52 V3.3.6 8052 Disassembly of payload.bin
-;  08/15/19 23:05
-;
 $NOMOD51
 $INCLUDE (80c52.mcu)
 ;
@@ -733,7 +729,7 @@ X046a:	push	psw
 CONFIG:
 	db 12h, 01h, 10h, 01h, 0ffh, 00h, 0ffh, 08h
 	db 82h, 05h ; VID_0582 - UA-25EX
-	db 0E6h, 00h ; PID_00E6 - UA-25EX
+	db 74h, 00h ; PID_0074 - UA-25EX
 	db 07h, 01h, 01h, 02h, 00h, 01h
 X0499:
 	db 12h, 01h, 10h, 01h, 00h, 00h, 00h, 08h
@@ -790,8 +786,8 @@ X06B3:
 	db 00h, 01h, 00h, 0Bh, 24h, 02h, 01h, 02h, 02h, 10h, 01h, 44h, 0ACh, 00h, 09h, 05h, 82h, 05h, 0C0h, 00h, 01h, 00h, 00h, 07h, 25h, 01h, 00h
 	db 00h, 00h, 00h
 X0761:	DB 04h, 03h, 09h, 04h 
-USBMAKE:	DB 0eh, 03h, "R",0,"o",0,"l",0,"a",0,"n",0,"d",0 ; X0765
-USBMODEL:	DB 1ch, 03h, "E",0,"D",0,"I",0,"R",0,"O",0,"L",0," ",0,"U",0,"A",0,"-",0,"2",0,"5",0,"E",0,"X",0 ; X0773
+USBMAKE:	DB 0eh, 03h, "R",0,"o",0,"l",0,"a",0,"n",0,"d",0 
+USBMODEL:	DB 1ah, 03h, "E",0,"D",0,"I",0,"R",0,"O",0,"L",0," ",0,"U",0,"A",0,"-",0,"2",0,"5",0 
 X078d:	push	acc
 	push	b
 	push	dph
@@ -4250,7 +4246,6 @@ X1f46:	dec	r2
 X1f4e:	clr	es
 	ret	
 	
-	db 0ffh
 ;
 ;	Register/Memory Equates
 ;
